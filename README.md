@@ -130,3 +130,44 @@ poetry update
 ### Construindo Gitignore
 
 No site https://www.toptal.com/developers/gitignore/api/python podemos obter um gitignore cofigurado para projetos python.
+
+### Fazendo a documentação
+
+Crie uma pasta docs e dentro dela de o comando 
+```
+sphinx-quickstart
+```
+Apos isto a pasta docs tera a seguinte estrutura
+```
+├── _build
+├── conf.py
+├── index.rst
+├── make.bat
+├── Makefile
+├── _static
+└── _templates
+```
+No arquivo config.py insira 
+```
+import os
+import sys
+sys.path.insert(0, os.path.abspath('..'))
+```
+e 
+```
+extensions = [ 'sphinx.ext.autodoc',
+               'sphinx.ext.doctest',
+               'sphinx.ext.intersphinx'
+              ]
+```
+Então na raiz do projeto podemos dar o comando
+```
+sphinx-apidoc -o docs/ source/
+```
+Isso ira gerar dois arquivos: source.rst e modules.rst. Adicone eles (sem o final .rst) em docs/index.rst. 
+
+Para visualizar o arquivo html na pasta docs de o comando
+```
+make html
+```
+Note que ao adicionar novos codigos e modulos sera necessario atualizar tais arquivos .rst dando navamente o comando sphinx-apidoc -o docs/ source/
