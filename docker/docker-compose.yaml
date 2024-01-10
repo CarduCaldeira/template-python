@@ -1,0 +1,17 @@
+services:
+  python-project:
+    image: template-python
+    container_name: template-python
+    hostname: docker
+    command: ["/bin/bash"]
+    build:
+      context: .
+      args:
+        GROUP_ID: 1000
+        USER_ID: 1000
+        USER_NAME: myuser
+        WORK_DIR:  /home/myuser/PROJECT
+    volumes:
+      - type: bind
+        source: ./..
+        target: /home/myuser/PROJECT

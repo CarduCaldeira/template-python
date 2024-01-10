@@ -171,3 +171,11 @@ Para visualizar o arquivo html na pasta docs de o comando
 make html
 ```
 Note que ao adicionar novos codigos e modulos sera necessario atualizar tais arquivos .rst dando navamente o comando sphinx-apidoc -o docs/ source/
+
+Com o proposito de que tal template seja utilizado para o desenvolvimento de projetos gerais, com exceção dos arquivos docs/config.py e docs/index.rst (sem adicionar os arquivos .rst gerados anteriormente) não serão comitados.
+
+## Conteinerização do template
+
+A seguir vamos conteinerizar a aplicação, adiconando um dockerfile e um docker compose. 
+
+
