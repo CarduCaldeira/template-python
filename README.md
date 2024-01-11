@@ -178,7 +178,8 @@ Com o proposito de que tal template seja utilizado para o desenvolvimento de pro
 
 A seguir vamos conteinerizar a aplicação, adiconando um dockerfile e um docker compose. 
 
-A imagem implementada nesse repositorio tem como a possibilidade a instalação caso desejado do CUDA, além disso, como o objetivo desse template é desenvolver um ambiente de desenvolvimento a otimização da imagem não foi uma preocupaçao relevante, sendo necessario a otimizaçao da imagem em um ambiente de produção.
+A imagem implementada nesse repositorio tem como a possibilidade a instalação caso desejado do CUDA, além disso, como o objetivo desse template é desenvolver um ambiente de desenvolvimento, a otimização da imagem não foi uma preocupaçao relevante, sendo necessario a otimizaçao da imagem em um ambiente de produção.
+Tal imagem foi baseada parcialmente no repositorio https://github.com/mateusoliveira43/python-project-template.
 
 Para rodar construir a imagem de o comando 
 ```
